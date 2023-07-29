@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-24T14:56:52Z" name="Default suite" finished-at="2023-05-24T14:56:57Z" duration-ms="5262">
+    <groups>
+    </groups>
+    <test started-at="2023-05-24T14:56:52Z" name="Default test" finished-at="2023-05-24T14:56:57Z" duration-ms="5262">
+      <class name="session29.ResponseSpecBuilderDemo">
+        <test-method is-config="true" signature="createResponseSpec()[pri:0, instance:session29.ResponseSpecBuilderDemo@3406472c]" started-at="2023-05-24T14:56:52Z" name="createResponseSpec" finished-at="2023-05-24T14:56:53Z" duration-ms="1146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createResponseSpec -->
+        <test-method signature="getAllBookingByName()[pri:0, instance:session29.ResponseSpecBuilderDemo@3406472c]" started-at="2023-05-24T14:56:53Z" name="getAllBookingByName" finished-at="2023-05-24T14:56:56Z" duration-ms="2628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBookingByName -->
+        <test-method signature="getAllBookingIds()[pri:0, instance:session29.ResponseSpecBuilderDemo@3406472c]" started-at="2023-05-24T14:56:56Z" name="getAllBookingIds" finished-at="2023-05-24T14:56:57Z" duration-ms="1443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBookingIds -->
+      </class> <!-- session29.ResponseSpecBuilderDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
