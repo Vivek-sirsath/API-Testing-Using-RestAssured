@@ -1,0 +1,35 @@
+* Rest Assured - API Testing list of sessions *
+
+Session # 01 - Basics Of API Testing
+Session # 02 - Intro Of Rest Assured  System Setup  First Project
+Session # 03 - How Rest Assured Works  Create HTTP Request
+Session # 04 - Validate HTTP Response Status
+Session # 05 - Validate HTTP Response Header
+Session # 06 - Validate JSON Response Body
+Session # 07 - How To Work With Query Parameter
+Session # 08 - Authorization _ Basic Authentication & Digest Authentication
+Session # 09 - Authorization  Bearer Token Authentication
+Session # 10 - Authorization  API Key Authentication
+Session # 11 - Authorization _ OAuth 2.0
+Session # 12 - Deserialize the JSON Response
+Session # 13 - How To RetrieveQuery Request Specification
+Session # 14 - Send XML Data As Payload In Request  Validate XML response
+Session # 15 - What is JSON _ Create JSON Object Using Java Map
+Session # 16 - Create JSON Array Using JSON Object and List
+Session # 17 - How To Create A JSON Object Using Jackson API
+Session # 18 - How To Upload File In Rest Assured
+Session # 19 - How To Create Your Own API & Perform CRUD Operations
+Session # 20 - Create POJO Class of JSON data Serialization Deserialization
+Session # 21 - Create POJO Class of JSON Array Serialization Deserialization
+Session # 22 - How To Create POJO Class of Nested JSON Object
+Session # 23 - How To Create POJO Class of Complex Nested JSON Object
+Session # 24 - Ignore Empty, Null & Default Values In Payload (@JsonInclude)
+Session # 25 - Ignore Fields from POJO Class From Serialization&Deserialization
+Session # 26 - Ignore Unknown Properties During Deserialization Process
+Session # 27 - Mock API Easily  Convert JSON Response To POJO  Class Object
+Session # 28 - How To Add Header In Request
+Session # 29 - ResponseSpecification & ResponseSpecBuilder
+Session # 30 - JSON Schema Validation
+Session # 31 - JSON Schema Validation Without Rest Assured
+
+
