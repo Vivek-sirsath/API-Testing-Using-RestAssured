@@ -23,13 +23,20 @@ public class BearerTokenAuthorization {
 
 		/*
 		 * 
-		 * { "name": "CodeKiller", "email": "Codekiller1@gmail.com", "gender": "male",
-		 * "status": "active" }
+		 * { "name": "CodeKiller",
+		 *  "email": "Codekiller1@gmail.com",
+		 *   "gender": "male",
+		 *   "status": "active" 
+		 *  }
 		 * 
 		 */
 
 		// We create JSON object to store the JSON data which we want to create on
 		// server
+		
+		// Change the following data everytime we send request, otherwise it will give client side error 422
+		// Because, this will become duplicate data on server.
+		
 		JSONObject payload = new JSONObject();
 		payload.put("name", "john");
 		payload.put("email", "john@gmail.com");
