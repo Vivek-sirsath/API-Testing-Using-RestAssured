@@ -34,7 +34,7 @@ public class BearerTokenAuthorization {
 		// We create JSON object to store the JSON data which we want to create on
 		// server
 		
-		// Change the following data everytime we send request, otherwise it will give client side error 422
+		// Change the following data every time we send request, otherwise it will give client side error 422
 		// Because, this will become duplicate data on server.
 		
 		JSONObject payload = new JSONObject();
