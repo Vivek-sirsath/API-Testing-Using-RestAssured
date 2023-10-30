@@ -1,3 +1,5 @@
+// Session # 10 - Authorization  API Key Authentication
+
 package session10;
 
 import org.testng.Assert;

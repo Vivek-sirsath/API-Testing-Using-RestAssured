@@ -1,3 +1,5 @@
+// Session # 06 - Validate JSON Response Body
+
 package session06;
 
 import org.testng.Assert;

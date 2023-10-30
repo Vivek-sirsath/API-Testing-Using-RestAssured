@@ -1,6 +1,7 @@
+// Session # 25 - Ignore Fields from POJO Class From Serialization&Deserialization
 
-/* We can use @JsonIgnore annotation of Jackson API Library to exclude/eliminate field of
-   POJO class from Serialization and Deserialization process
+/* We can use @JsonIgnore annotation of Jackson API Library to 
+ * exclude/eliminate field of POJO class from Serialization and Deserialization process
 */
 
 package session25;

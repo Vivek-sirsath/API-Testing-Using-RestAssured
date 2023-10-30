@@ -1,3 +1,5 @@
+// Session # 12 - Deserialize the JSON Response
+
 package session12;
 
 import org.json.simple.JSONObject;
@@ -43,15 +45,15 @@ public class DeserializationJSONToClass {
 		// Statement for deserialization
 		JSONPostResponse respClass = responseBody.as(JSONPostResponse.class);
 
-		// Class<T> is a generic form of any class of type T which is also referred to
-		// as template class.
-		// Here T stands for Template
-		// as() method performs two important tasks
-		// First it will create instance of JSONPostResponse class.
-		// Second it will fill the values in all nodes(members) in response of post
-		// method which stored in responseBody variable of JSONPostResponse class.
-		// Will assign all the values to all the String members present in
-		// JSONPostResponse class.
+		// - Class<T> is a generic form of any class of type T which is also referred to
+		//   as template class.
+		//   Here T stands for Template
+		// - as() method performs two important tasks
+		//   First it will create instance of JSONPostResponse class.
+		//   Second it will fill the values in all nodes(members) in response of post
+		//   method which stored in responseBody variable of JSONPostResponse class.
+		// - Will assign all the values to all the String members present in
+		//   JSONPostResponse class.
 
 		// Validate "name","job" from response stored in JSONPostResponse class members
 		Assert.assertEquals(respClass.name, "Vivek", "Check for name:");

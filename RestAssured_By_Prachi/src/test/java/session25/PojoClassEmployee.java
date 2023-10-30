@@ -1,3 +1,5 @@
+// Session # 25 - Ignore Fields from POJO Class From Serialization&Deserialization
+
 package session25;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

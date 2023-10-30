@@ -1,3 +1,5 @@
+// Session # 05 - Validate HTTP Response Header
+
 package session05;
 
 import org.testng.annotations.Test;

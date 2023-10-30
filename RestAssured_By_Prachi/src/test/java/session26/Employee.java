@@ -1,3 +1,5 @@
+// Session # 26 - Ignore Unknown Properties During Deserialization Process
+
 package session26;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

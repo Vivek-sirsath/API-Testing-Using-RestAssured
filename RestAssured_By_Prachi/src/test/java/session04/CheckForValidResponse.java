@@ -1,3 +1,5 @@
+// Session # 04 - Validate HTTP Response Status
+
 package session04;
 
 import org.testng.Assert;

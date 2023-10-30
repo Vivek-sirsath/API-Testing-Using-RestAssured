@@ -13,9 +13,9 @@ Session # 10 - Authorization  API Key Authentication
 Session # 11 - Authorization _ OAuth 2.0
 Session # 12 - Deserialize the JSON Response
 Session # 13 - How To RetrieveQuery Request Specification
-Session # 14 - Send XML Data As Payload In Request  Validate XML response
-Session # 15 - What is JSON _ Create JSON Object Using Java Map
-Session # 16 - Create JSON Array Using JSON Object and List
+Session # 14 - Send XML Data As Payload In Request and Validate XML response
+Session # 15 - What is JSON _ Create JSON Object Using Java Map Interface
+Session # 16 - Create JSON Array Using JSON Object and List Interface
 Session # 17 - How To Create A JSON Object Using Jackson API
 Session # 18 - How To Upload File In Rest Assured
 Session # 19 - How To Create Your Own API & Perform CRUD Operations

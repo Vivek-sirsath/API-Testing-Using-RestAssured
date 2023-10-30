@@ -1,5 +1,5 @@
-
-/*
+/* Session # 29 - ResponseSpecification & ResponseSpecBuilder
+ * 
  * What is ResponseSpecification (Interface) and ResponseSpecBuilder (Class) ?
  * 
  * ResponseSpecification (Interface) comes handy in situation where similar
@@ -7,7 +7,6 @@
  * We can achieve this by grouping common assertions in to a ResponseSpecBuilder (Class) instance
  * and using this instance we can validate multiple tests.
 */
-
 
 package session29;
 

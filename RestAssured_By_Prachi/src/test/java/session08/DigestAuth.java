@@ -1,3 +1,5 @@
+// Session # 08 - Authorization _ Basic Authentication & Digest Authentication
+
 package session08;
 
 import org.testng.Assert;

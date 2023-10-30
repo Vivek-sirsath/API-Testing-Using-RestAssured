@@ -1,4 +1,4 @@
-
+// Session # 03 - How Rest Assured Works  Create HTTP Request
 // To avoid mentioning of ClassName (RestAssured), We need to make it static at import statement AS (import static io.restassured.RestAssured.*;)
 package session03;
 

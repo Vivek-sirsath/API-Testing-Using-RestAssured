@@ -1,3 +1,5 @@
+// Session # 24 - Ignore Empty, Null & Default Values In Payload (@JsonInclude)
+
 package session24;
 
 import java.util.List;
@@ -75,6 +77,5 @@ public class employeePojoClass {
 	public void setFamilyMembers(Map<String, String> familyMembers) {
 		this.familyMembers = familyMembers;
 	}
-	
-		
+			
 }

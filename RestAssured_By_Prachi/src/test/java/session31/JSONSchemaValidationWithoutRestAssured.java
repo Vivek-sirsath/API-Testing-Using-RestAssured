@@ -1,3 +1,5 @@
+// Session # 31 - JSON Schema Validation Without Rest Assured
+
 package session31;
 
 import java.io.File;
@@ -20,7 +22,7 @@ public class JSONSchemaValidationWithoutRestAssured {
 				+ "}";
 
 // We use '.matchesJsonSchema() method' when our json file is saved on local location		
-        MatcherAssert.assertThat(json, JsonSchemaValidator.matchesJsonSchema(new File("C:\\Users\\Admin\\Desktop\\session31_employeeSchema.json")));
+//        MatcherAssert.assertThat(json, JsonSchemaValidator.matchesJsonSchema(new File("C:\\Users\\Admin\\Desktop\\session31_employeeSchema.json")));
 		
 		
 // If the json file is inside resources folder of project

@@ -1,3 +1,4 @@
+// Session # 26 - Ignore Unknown Properties During Deserialization Process
 
 /* How to ignore Unknown Properties?
  * 1) Using @JsonIgnoreProperties annotation

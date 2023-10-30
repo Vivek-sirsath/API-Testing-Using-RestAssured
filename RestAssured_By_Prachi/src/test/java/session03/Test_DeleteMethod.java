@@ -1,5 +1,6 @@
-package session03;
+// Session # 03 - How Rest Assured Works  Create HTTP Request
 
+package session03;
 
 import org.testng.annotations.Test;
 
