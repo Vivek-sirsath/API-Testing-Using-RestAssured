@@ -21,13 +21,13 @@ public class QueryParameter {
 		// Specify base URI, base Path and query parameters
 		requestSpec.baseUri("https://reqres.in");
 		requestSpec.basePath("/api/users");
-		requestSpec.queryParam("page", 2).queryParam("id", 8);
+		requestSpec.queryParam("page", 2).queryParam("id", 8); // Can add multiple query parameter.
 
 		// Perform get request and store response in a variable
 		Response response = requestSpec.get();
 
 		// Read Response Body
-		String responseBodyString = response.getBody().asString();
+		String responseBodyString = response.getBody().asPrettyString();
 		// Print response Body
 		System.out.println("Response Body:- " + responseBodyString);
 
@@ -36,6 +36,14 @@ public class QueryParameter {
 		// from a Object document. You can regard it as an alternative to XPath for JSON
 		JsonPath jsonPathView = response.jsonPath();
 		System.out.println("jsonPathView:- " + jsonPathView);
+
+		// Get first name of Lindsay
+		String first_name = jsonPathView.get("data.first_name");
+		System.out.println(first_name);
+
+		// Get last name of Lindsay
+		String last_name = jsonPathView.get("data.last_name");
+		System.out.println(last_name);
 
 		// Get email of Lindsay from jsonPathView
 		String email = jsonPathView.get("data.email");
