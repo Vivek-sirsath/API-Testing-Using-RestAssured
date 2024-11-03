@@ -1,4 +1,8 @@
 // Session # 08 - Authorization _ Basic Authentication & Digest Authentication
+// Default basic authentication is Non-Preemptive Authentication
+// Unless and until we don't mention Preemptive word in code it is Default Basic Auth
+// Base64 encoding is used to encode Username and password..
+
 
 package session08;
 
@@ -24,7 +28,8 @@ public class NonPreemptiveBasicAuth {
 		Response response = requestSpec.auth().basic("postman", "password").get(); // If type passwor then Status Line:-
 																					// HTTP/1.1 401 Unauthorized
 		// print status line
-		System.out.println("Status Line:- " + response.getStatusLine());
+		System.out.println("Status Line:- " + response.getStatusLine()); // HTTP/1.1 200 OK
+		System.out.println("Response Body:- " + response.body().asString()); // {"authenticated": true}
 
 	}
 

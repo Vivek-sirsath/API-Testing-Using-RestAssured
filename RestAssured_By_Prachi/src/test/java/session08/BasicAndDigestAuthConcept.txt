@@ -1,0 +1,13 @@
+# Basic Authentication and Digest Authentication
+
+1) For Basic Authentication (Non-Preemptive and Preemptive)
+URL: https://postman-echo.com/basic-auth
+UserName: postman
+Password: password
+
+2) For Digest Authentication
+URL: https://httpbin.org/
+> Select 3rd Digest Auth > Click on Try it out 
+> Enter User and Password (vivek, 1234)
+> Click on Execute > URL will be generate 
+> Use that URL in Postman or RestAssured

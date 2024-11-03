@@ -10,29 +10,33 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class DigestAuth {
-	
+
 	@Test
 	public void digestAuth() {
-		//http://httpbin.org/digest-auth/undefined/vivek/1234
-		
+		// http://httpbin.org/digest-auth/undefined/vivek/1234
+
 		// specify the given request
-				RequestSpecification requestSpec = RestAssured.given();
-				
-				// specify the baseUri and basePath
-				requestSpec.baseUri("http://httpbin.org");
-				requestSpec.basePath("/digest-auth/undefined/vivek/1234");
-				
-				// Create Get request with digest authentication credentials
-				Response response = requestSpec.auth().digest("vivek", "1234").get(); // If anything wrong then Status Line:- HTTP/1.1 401 Unauthorized
-				
-				// print status line
-				System.out.println(" Digest Auth Status Line:- "+response.getStatusLine());
-				
-				// Validate response code
-				Assert.assertEquals(response.getStatusCode(), 200);
-				System.out.println("***Assertion Verified***");
-				
-		
+		RequestSpecification requestSpec = RestAssured.given();
+
+		// specify the baseUri and basePath
+		requestSpec.baseUri("http://httpbin.org");
+		requestSpec.basePath("/digest-auth/undefined/vivek/1234");
+
+		// Create Get request with digest authentication credentials
+		Response response = requestSpec.auth().digest("vivek", "1234").get(); // If anything wrong then Status Line:-
+																				// HTTP/1.1 401 Unauthorized
+
+		// print status line
+		System.out.println(" Digest Auth Status Line:- " + response.getStatusLine()); // HTTP/1.1 200 OK
+		System.out.println("Digest Auth Response Body:- " + response.body().asString());
+		/*
+		 * { "authenticated": true, "user": "vivek" }
+		 */
+
+		// Validate response code
+		Assert.assertEquals(response.getStatusCode(), 200, "Check for status code");
+		System.out.println("***Assertion Verified***");
+
 	}
 
 }
