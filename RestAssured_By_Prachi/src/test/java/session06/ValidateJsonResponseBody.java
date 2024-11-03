@@ -33,7 +33,7 @@ public class ValidateJsonResponseBody {
 		System.out.println(response.asPrettyString());
 				
 		// Validate response body contains "Eve" by using Assertion and contains method
-		Assert.assertEquals(responseString.contains("Eve"), true, "Check for Presence");
+		Assert.assertEquals(responseString.contains("Eve"), true, "Check for Presence of Eve");
 		System.out.println("___Presence Verified___");
 		
 		// Verify Eve at 3rd index in response body using tool JSON PathFinder
