@@ -1,0 +1,10 @@
+Serialization and Deserialization:- 
+
+# These are programming techniques for conversion of class object to byte stream and vice versa.
+
+Serialization:    Object ---> Byte stream
+Deserialization:  Byte stream ---> Object
+
+# This conversion is platform independent.
+- If we serialized the object in byte stream in Windows OS then,
+  We can deserialize the byte stream into object in MAC OS. D 
