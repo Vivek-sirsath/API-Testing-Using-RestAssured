@@ -11,7 +11,7 @@ public class Test_DeleteMethod {
 	public void test06() 
 	{
 		RestAssured.baseURI="https://reqres.in/api/users/312";
-		RestAssured.given().
+		RestAssured.given().header("x-api-key", "reqres-free-v1").
 		when().delete().
 		then().statusCode(204).log().all();
 		

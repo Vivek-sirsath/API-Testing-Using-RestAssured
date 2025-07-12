@@ -6,13 +6,18 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import junit.framework.Assert;
 
 public class Test_GetMethod {
 
 	@Test
 	public void test01() {
-		Response response = RestAssured.get("https://reqres.in/api/users?page=2");
+		
+		RequestSpecification reqSpec = RestAssured.given();
+		reqSpec.header("x-api-key", "reqres-free-v1");
+		
+		Response response = reqSpec.get("https://reqres.in/api/users?page=1");
 		 // To avoid mentioning of ClassName (RestAssured), We need to make it static at import statement AS (import static io.restassured.RestAssured.*;)
 		System.out.println("Response Code: " + response.getStatusCode());
 		System.out.println("Response Body: " + response.getBody().asPrettyString());
