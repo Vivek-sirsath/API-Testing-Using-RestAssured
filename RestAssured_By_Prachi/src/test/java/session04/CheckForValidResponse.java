@@ -14,7 +14,7 @@ public class CheckForValidResponse {
 	
 	//******* FIRST WAY ********//
 	
-	@Test (enabled = false)
+	@Test (enabled = true)
 	public void GetSingleUser() 
 	{
 		// Specify baseURL
@@ -22,6 +22,7 @@ public class CheckForValidResponse {
 		
 		// Get request Specification of the request , Allows you to specify how the request will look like.
 		RequestSpecification reqSpec = RestAssured.given();
+		reqSpec.header("x-api-key", "reqres-free-v1");
 		
 		// Calling Get method
 		Response resp =  reqSpec.get();
@@ -30,8 +31,8 @@ public class CheckForValidResponse {
 		int statusCode = resp.getStatusCode();
 		
 		// Validate actual status code & expected status code
-		//Assert.assertEquals(statusCode, 200, "correct status code received");
-		//Assert.assertEquals(statusCode, 201, "incorrect status code received");
+		Assert.assertEquals(statusCode, 200, "correct status code received");
+//		Assert.assertEquals(statusCode, 201, "incorrect status code received");
 		
 		
 		// Get StatusLine
@@ -70,7 +71,7 @@ public class CheckForValidResponse {
 	//******* THIRD WAY ********// 
 	// BDD Style
 	
-	@Test
+	@Test(enabled = false)
 	public void GetSingleUser_BDD_Style() 
 	{
 		RestAssured.given() // Precondition
