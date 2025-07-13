@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
 public class ValidateJsonResponseBody {
@@ -23,8 +24,23 @@ public class ValidateJsonResponseBody {
 		requestSpec.baseUri("https://reqres.in");
 		requestSpec.basePath("/api/users?page=2");
 		
+		// Specify API-KEY in header
+		requestSpec.header("x-api-key", "reqres-free-v1");
+		
 		// Create Get Request and store the response in a variable
 		Response response = requestSpec.get(); // response is local variable
+		
+/*		
+        1 WAY :
+        
+		// Read response body
+		ResponseBody resBody = response.getBody();
+		// Store response body as String
+		String strBody = resBody.asPrettyString();
+		System.out.println(strBody);
+*/		
+		
+//		2 Way
 		
 		// Store the same response in a variable as string because contains method will be applicable on string only
 		// But in console we can print the response as 'asPrettyString'
@@ -42,6 +58,7 @@ public class ValidateJsonResponseBody {
 		// Store the path of Eve retrieved from JSON Path finder
 		JsonPath path = response.jsonPath();
 		String first_name = path.get("data[3].first_name");
+		System.out.println("Object at 3rd index: " + first_name);
 		
 		// Validate the path of Eve is correct or not using Assertion
 		Assert.assertEquals(first_name, "Eve", "Check for correct path");
