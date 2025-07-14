@@ -21,6 +21,7 @@ public class QueryParameter {
 		// Specify base URI, base Path and query parameters
 		requestSpec.baseUri("https://reqres.in");
 		requestSpec.basePath("/api/users");
+		requestSpec.header("x-api-key", "reqres-free-v1");
 		requestSpec.queryParam("page", 2).queryParam("id", 8); // Can add multiple query parameter.
 
 		// Perform get request and store response in a variable
