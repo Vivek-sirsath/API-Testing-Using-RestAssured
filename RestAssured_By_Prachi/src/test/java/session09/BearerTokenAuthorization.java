@@ -25,24 +25,24 @@ public class BearerTokenAuthorization {
 
 		/*
 		 * 
-		 * { "name": "CodeKiller",
-		 *  "email": "Codekiller1@gmail.com",
+		 * { 
+		 *   "name": "CodeKiller",
+		 *   "email": "Codekiller1@gmail.com",
 		 *   "gender": "male",
 		 *   "status": "active" 
-		 *  }
+		 * }
 		 * 
 		 */
 
-		// We create JSON object to store the JSON data which we want to create on
-		// server
+		// We create JSON object to store the JSON data which we want to create on server
 		
 		// Change the following data every time we send request, otherwise it will give client side error 422
 		// Because, this will become duplicate data on server.
 		
 		JSONObject payload = new JSONObject();
-		payload.put("name", "john");
-		payload.put("email", "john@gmail.com");
-		payload.put("gender", "male");
+		payload.put("name", "ishita");
+		payload.put("email", "ishita@gmail.com");
+		payload.put("gender", "female");
 		payload.put("status", "active");
 
 		// We will need a bearer token for authorization 
@@ -52,12 +52,16 @@ public class BearerTokenAuthorization {
 		// This token will go as a part of header, hence we need to create header 
 		// which will be in key-value pair.
 	    
-
 		requestSpec.header("Authorization", AuthToken).contentType(ContentType.JSON).body(payload.toJSONString());
 
 		// Perform POST request
 		Response response = requestSpec.post();
 		System.out.println("Response Line:- " + response.getStatusLine());
+		
+		// Get the response body from the resource created
+		Response getResponse = requestSpec.get();
+		System.out.println("Get response string: " + getResponse.asPrettyString());
+			
 	}
 
 }
