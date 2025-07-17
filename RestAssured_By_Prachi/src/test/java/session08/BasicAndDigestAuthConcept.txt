@@ -11,3 +11,15 @@ URL: https://httpbin.org/
 > Enter User and Password (vivek, 1234)
 > Click on Execute > URL will be generate 
 > Use that URL in Postman or RestAssured
+
+
+
+Comparison Table:
+----------------
+Feature	                Preemptive	                            Non-Preemptive
+-------------------------------------------------------------------------------------------------------
+Initial Request	        Includes credentials	                No credentials sent
+Round Trips            	One                                     Two (at least)
+Performance	            Faster	                                Slightly slower
+Security	            Less secure (credentials always sent)	More secure (credentials sent on demand)
+Usage	                Known protected APIs	                Unknown or optional authentication
