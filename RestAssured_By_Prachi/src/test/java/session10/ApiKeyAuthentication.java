@@ -16,15 +16,15 @@ public class ApiKeyAuthentication {
 	public void GetWeatherDataByCity() {
 
 		// create request specification
-		RequestSpecification requestSpec = RestAssured.given();
+		RequestSpecification httpRequest = RestAssured.given();
 
 		// specify baseUri and basePath
-		requestSpec.baseUri("https://api.openweathermap.org");
-		requestSpec.basePath("/data/2.5/weather");
-		requestSpec.queryParam("q", "mumbai").queryParam("appid", "4a96e8b45772a63050ec646c7c89e59a");
+		httpRequest.baseUri("https://api.openweathermap.org");
+		httpRequest.basePath("/data/2.5/weather");
+		httpRequest.queryParam("q", "mumbai").queryParam("appid", "4a96e8b45772a63050ec646c7c89e59a");
 
 		// perform the get request
-		Response response = requestSpec.get();
+		Response response = httpRequest.get();
 
 		// print the Status Line and Response Body
 		System.out.println("Status Line:-  " + response.getStatusLine());
