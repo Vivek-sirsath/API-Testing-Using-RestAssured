@@ -29,7 +29,7 @@ public class OAuth2Authentication {
 		requestSpec.baseUri("https://api-m.sandbox.paypal.com");
 		requestSpec.basePath("/v1/oauth2/token");
 
-		// perform basic authentication of preemptive type, using RequestSpecification reference (requestSpec)
+		// perform basic authentication of preemptive type (with credentials), using RequestSpecification reference (requestSpec)
 		Response response = requestSpec.auth().preemptive()
 				.basic(ClientID, ClientSecret)
 				.param("grant_type", "client_credentials").post();
@@ -44,10 +44,9 @@ public class OAuth2Authentication {
 		Assert.assertEquals(response.getStatusCode(), 200, "Check for status code:");
 		System.out.println("Assertion Verified");
 
-		// get and print access token from response body and store in a static variable
-		// at class level using path(). 
+		// get and print access token from response body and store in a static variable at class level using path(). 
 		// The key it will take inside 'path()' parenthesis is 'access_token'.
-		//This will be an attribute or key which will return a value as string.
+		// This will be an attribute or key which will return a value as string.
 		accessToken = response.getBody().path("access_token");
 		System.out.println("access token:- " + accessToken);
 
