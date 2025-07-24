@@ -1,0 +1,19 @@
+Comparison Table:
+----------------
+Feature	                Preemptive	                            Non-Preemptive
+-------------------------------------------------------------------------------------------------------
+Initial Request	        Includes credentials	                No credentials sent
+Round Trips            	One                                     Two (at least)
+Performance	            Faster	                                Slightly slower
+Security	            Less secure (credentials always sent)	More secure (credentials sent on demand)
+Usage	                Known protected APIs	                Unknown or optional authentication
+
+
+OAuth 2.0 Protocol -
+------------------
+- Its the protocol which is followed while authenticating any third party application.
+- e.g.
+       xyz.com asks us to login to their web site. But we have a Microsoft or GitHub accounts.
+       Then xyz.com prompts us to login with Microsoft or GitHub.
+       Then we choose one of the option. 
+       Then the authentication happens through OAuth2.0 protocol. Because xyz.com will be third party application for us.
