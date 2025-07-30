@@ -27,14 +27,13 @@ public class DeserializationJSONToClass {
 
 		// create request body using JSONObject class
 		JSONObject jsonData = new JSONObject();
-		jsonData.put("name", "Vivek"); // This data is in Hashmap Format
-		jsonData.put("job", "QA"); // This data is in Hashmap Format , we need to sent it in JSON format
+		jsonData.put("name", "Vivek"); // This data is in HashMap Format
+		jsonData.put("job", "QA"); // This data is in HashMap Format , we need to sent it in JSON format
 
 		// create post request
 		Response response = requestSpec.contentType(ContentType.JSON).body(jsonData.toJSONString()).post();
 
-		// store the response body received from getBody() method in a variable using
-		// ResponseBody Interface
+		// Use ResponseBody Interface to store the response body in a variable received from getBody() method 
 		ResponseBody responseBody = response.getBody();
 
 		// Now we have to convert the JSON data into class object which stored in
