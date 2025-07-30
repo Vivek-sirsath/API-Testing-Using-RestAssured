@@ -20,8 +20,7 @@ public class RetrieveQueryParamFromRequest {
 	@Test
 	public void createUser() {
 
-		// create json data using JSONObject class and storing the data into object
-		// referenceS
+		// create json data using JSONObject class and storing the data into object references
 		JSONObject jsonData = new JSONObject();
 		jsonData.put("name", "Rekha");
 		jsonData.put("job", "QA");
