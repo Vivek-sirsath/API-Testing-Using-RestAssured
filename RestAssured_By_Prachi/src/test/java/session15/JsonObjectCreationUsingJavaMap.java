@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public class JsonObjectCreationUsingJavaMap {
 
@@ -74,9 +75,13 @@ public class JsonObjectCreationUsingJavaMap {
 		skills.put("Programming Skill", "Java");
 		skills.put("Front End Skill", "Selenium");
 		skills.put("Back End Skill", "Rest Assured");
+		userData.put("TechSkills", skills);
 		
+		// Create request specification and add 'API-Key' as header
+		RequestSpecification reqSpec = RestAssured.given();
+				 reqSpec.header("x-api-key", "reqres-free-v1");
 		// Create POST request
-		Response resp = RestAssured.given()
+		Response resp = reqSpec
 				.baseUri("https://reqres.in/api/users")
 				.contentType(ContentType.JSON)
 				.body(userData)
