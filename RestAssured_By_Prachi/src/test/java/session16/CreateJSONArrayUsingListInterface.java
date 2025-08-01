@@ -54,6 +54,7 @@ public class CreateJSONArrayUsingListInterface {
 		// Specify baseURL
 		reqSpec.baseUri("https://reqres.in/api/users");
 		reqSpec.contentType(ContentType.JSON);
+		reqSpec.header("x-api-key", "reqres-free-v1");
 		reqSpec.body(jsonArrayListPayload);
 
 		// Perform POST request
