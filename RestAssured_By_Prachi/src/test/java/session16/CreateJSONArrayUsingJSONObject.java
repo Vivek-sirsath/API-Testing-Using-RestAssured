@@ -48,6 +48,7 @@ public class CreateJSONArrayUsingJSONObject {
 
 		// Specify baseURL
 		reqSpec.baseUri("https://reqres.in/api/users");
+		reqSpec.header("x-api-key", "reqres-free-v1");
 		reqSpec.contentType(ContentType.JSON);
 		reqSpec.body(usersPayload);
 
