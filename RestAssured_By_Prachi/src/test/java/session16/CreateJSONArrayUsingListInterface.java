@@ -41,6 +41,7 @@ public class CreateJSONArrayUsingListInterface {
 		user3.put("salary", 58300.25);
 
 		// Create ArrayList to add above objects using List Interface
+		// List interface will accept the type of data <Map<String, Object>>
 		List<Map<String, Object>> jsonArrayListPayload = new ArrayList<>();
 
 		// Add above 3 users to the List/Collection
