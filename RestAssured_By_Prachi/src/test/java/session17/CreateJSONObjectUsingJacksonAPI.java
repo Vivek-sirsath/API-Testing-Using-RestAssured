@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -21,7 +22,7 @@ import io.restassured.specification.RequestSpecification;
 public class CreateJSONObjectUsingJacksonAPI {
 
 	@Test
-	public void createUser() throws Exception {
+	public void createUser() throws JsonProcessingException {
 		
 		// Create ObjectMapper Instance
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -44,7 +45,8 @@ public class CreateJSONObjectUsingJacksonAPI {
 		
 		userDetails.set("TechSkills", keySkill);
 		
-		// To Print JSON object - 'userDetails' as String		
+		// To Print JSON object - 'userDetails' as String 
+		// (Exception to be handled - 'JsonProcessingException')
 		String userDetailsAsString = objectMapper
 				.writerWithDefaultPrettyPrinter()
 				.writeValueAsString(userDetails);
@@ -60,11 +62,16 @@ public class CreateJSONObjectUsingJacksonAPI {
 		Boolean maritalstatus = userDetails.get("IsMarried").asBoolean();
 		System.out.println("Is married?:- " + maritalstatus);
 		
-		// To retrieve the value of WebAutomation 
-		String webAutomationValue =userDetails.get("TechSkills").get("WebAutomation").asText();
+		// To retrieve the value of 'Programming Skill'
+		String programmingSkillsValue = userDetails.get("TechSkills").get("Programming Skills").asText();
+		System.out.println("Value of Programming Skills:- " + programmingSkillsValue);
+		
+		// To retrieve the value of 'WebAutomation' 
+		String webAutomationValue = userDetails.get("TechSkills").get("WebAutomation").asText();
 		System.out.println("Value of the WebAutomation:- " + webAutomationValue);
 		
 		// To print all the field names/ keys using Iterator Interface and fieldNames() method
+		// We've used fieldNames() method to get the names.
 		System.out.println(" ");
 		System.out.println("********   All Keys   ********");
 		Iterator <String> allFieldNames = userDetails.fieldNames();		
@@ -74,7 +81,8 @@ public class CreateJSONObjectUsingJacksonAPI {
 		}
 		
 		// To print all the values using Iterator Interface and elements() method
-		// Here for values we need to use data type as <JsonNode>
+		// Here for values we need to use DataType as <JsonNode>
+		// We've used the elements() method to get the values.
 		System.out.println(" ");
 		System.out.println("********   All Values   ********");
 		Iterator<JsonNode> allValues = userDetails.elements();	
