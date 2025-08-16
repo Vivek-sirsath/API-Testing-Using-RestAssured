@@ -31,6 +31,9 @@ public class TextFileUpload {
 		// Interview que:- While we upload a file, what value we specify in content type?
 		// Ans: multipart/form-data
 		
+		// We can also specify 'multipart/form-data' explicitly as contentType()
+		reqSpec.contentType("multipart/form-data");
+		
 		// Perform POST request
 		Response response = reqSpec.post();
 		
