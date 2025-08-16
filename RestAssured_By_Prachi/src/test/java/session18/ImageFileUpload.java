@@ -20,7 +20,7 @@ public class ImageFileUpload {
 	public void uploadImageFile() {
 		
 		// Specify image file path
-		File demoImageFile = new File("C:\\Users\\Admin\\Desktop\\demoIMG.jpg");
+		File demoImageFile = new File("F:\\Automation Testing\\Automation By Prachi Gupta (Hindi)\\API Testing Rest Assured (Hindi)\\demoIMG.jpg");
 		
 		// Create Request Specification
 		RequestSpecification reqSpec = RestAssured.given();
