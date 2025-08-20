@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="session31.JSONSchemaValidationWithoutRestAssured">
+      <class name="session15.JsonObjectCreationUsingJavaMap">
         <methods>
-          <include name="testMethod"/>
+          <include name="createUser"/>
         </methods>
-      </class> <!-- session31.JSONSchemaValidationWithoutRestAssured -->
+      </class> <!-- session15.JsonObjectCreationUsingJavaMap -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
