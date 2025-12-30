@@ -60,6 +60,7 @@ public class ComplexNestedJSONObject {
 				emp1.setAge(35);
 				emp1.setSalary(58000.42);
 				
+				// Creating object of EmployeeAddress class of Session 22
 				EmployeeAddress emp1Address = new EmployeeAddress();
 				emp1Address.setStreet("Ring Road");
 				emp1Address.setCity("Jalgaon");
